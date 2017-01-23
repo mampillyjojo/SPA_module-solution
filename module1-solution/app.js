@@ -10,17 +10,17 @@
 
 
     $scope.onButtonClick = function(){
-      $scope.msg = "Click";
       var inputText = $scope.foodItems;
 
        validateText(inputText);
     }
 
+    // Validation of text
     function validateText( value){
       if( undefined !== value && value.length > 0){
 
-
         var inputArray = value.split(',');
+        // check if number of items is greater than three
         if(inputArray.length <= 3){
           $scope.msg ="Enjoy!";
         }else{
