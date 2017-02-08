@@ -85,13 +85,16 @@
 
       menuSearchService.getMatchedMenuItems = function(searchString){
         foundItemsList = [];
-        for(var i=0; i < temp.length; i++){
+        if(searchString.trim().length > 0){
+          for(var i=0; i < temp.length; i++){
 
-          if(temp[i].description.indexOf(searchString) !== -1){
-            foundItemsList.push(temp[i]);
+            if(temp[i].description.indexOf(searchString) !== -1){
+              foundItemsList.push(temp[i]);
+            }
+
           }
-
         }
+
 
       }
 
